@@ -139,10 +139,6 @@ const params = {
                     price: '162.00',
                 },
             ],
-            /* exBed: {
-                price: 200.0,
-                ageQualifyingCode: "10", //8 çocuk 10 yetişkin yetişkinlere maxAge göndermeye gerek yok
-            }, */
             closed: 1,
             minStay: 1,
             maxStay: 4,
@@ -169,6 +165,7 @@ params.rates.forEach((rate) => {
     rate.dow.Sat = (rate.dow.Sat == 1) ? true: false;
     rate.dow.Sun = (rate.dow.Sun == 1) ? true: false;
 });
+
 const preparedXML = template(params);
 
 document.querySelector('#output').textContent = preparedXML;
